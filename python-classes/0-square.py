@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""Square Class
-
-This class don't do anything
-
-"""
+"""define a class Square here"""
 
 
 class Square:
-	"""Square class"""
-    pass
+	"""Square class content"""
+	pass
