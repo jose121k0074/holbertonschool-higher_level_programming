@@ -3,6 +3,6 @@ def multiply_by_2(a_dictionary):
     temp_dictionary = a_dictionary.copy()
 
     for key, value in temp_dictionary.items():
-        b_dictionary[key] = value * 2
+        temp_dictionary[key] = value * 2
 
     return temp_dictionary
