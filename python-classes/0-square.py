@@ -3,5 +3,5 @@
 
 
 class Square:
-	"""Square class content"""
+	"""Square class"""
 	pass
