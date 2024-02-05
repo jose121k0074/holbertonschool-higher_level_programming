@@ -7,8 +7,10 @@ A Square Class
 
 
 class Square:
+	"""a square class"""
 
-    def __init__(self, size):
+
+	def __init__(self, size):
         """__init__
 
         The __init__ method initializes the size value
@@ -18,4 +20,5 @@ class Square:
             size (int): The size of the square.
 
         """
+
         self.__size = size
