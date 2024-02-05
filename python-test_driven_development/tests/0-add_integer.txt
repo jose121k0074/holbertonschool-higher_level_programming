@@ -7,6 +7,11 @@ Import module:
     >>> add_integer = __import__('0-add_integer').add_integer
 
 
+Function:
+=========
+Write a function that adds 2 integers.
+
+
 Operations:
 ===========
 ‘a’ and ‘b’ must be integers or floats, otherwise raise a TypeError exception
