@@ -3,7 +3,7 @@
 
 
 def inherits_from(obj, a_class):
-	"""
+    """
     initializes some values
 
     """
