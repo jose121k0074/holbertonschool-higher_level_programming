@@ -12,7 +12,7 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """
 
-        initializes some values
+        Checks the parameters and initializes some values
 
         Args:
             width (:obj:`int`, optional): The width of the Rectangle.
@@ -22,6 +22,15 @@ class Rectangle:
 
         self.width = width
         self.height = height
+
+    def __del__(self):
+        """
+
+        Prints a message when an instance of Rectangle is deleted
+
+        """
+
+        print('Bye rectangle...')
 
     @property
     def width(self):
@@ -182,3 +191,50 @@ class Rectangle:
             return 0
 
         return self.__width * 2 + self.__height * 2
+
+    def __draw_rectangle(self):
+        """
+
+        Draw the Rectangle with their size
+
+        Returns:
+            str: `Empty` If width or height is `0`,
+            otherwise returns a string with the Rectangle.
+
+        """
+
+        rect_str = ''
+        w = self.__width
+        h = self.__height
+
+        if w == 0 or h == 0:
+            return rect_str
+
+        for i in range(h):
+            for j in range(w):
+                rect_str += '#'
+
+            if i != h - 1:
+                rect_str += '\n'
+
+        return rect_str
+
+    def __str__(self):
+        """
+
+        Returns a string with the representation of the Rectangle.
+
+        """
+
+        return self.__draw_rectangle()
+
+    def __repr__(self):
+        """
+
+        Returns the representation of the Rectangle.
+
+        """
+        w = str(eval('self.width'))
+        h = str(eval('self.height'))
+
+        return 'Rectangle(' + w + ', ' + h + ')'
