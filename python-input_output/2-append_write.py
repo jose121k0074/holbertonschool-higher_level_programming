@@ -3,9 +3,9 @@
 
 
 def append_write(filename="", text=""):
-	"""
-	init function
-	"""
+    """
+    init function
+    """
 	
     with open(filename, mode='a', encoding='utf-8') as f:
         return f.write(text)
