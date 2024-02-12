@@ -4,16 +4,14 @@
 
 class BaseGeometry:
     """
-    
+
     An empty Rectangle class
 
     """
 
     def area(self):
-    	"""
-    	
-    	initializes some values
-    	
-    	"""
-        
+        """
+        initializes some values
+        """
+
         raise Exception('area() is not implemented')
