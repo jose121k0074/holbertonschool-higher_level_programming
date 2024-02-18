@@ -9,7 +9,7 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
         """
-        init function
+        init fucntion
         """
 
         self.first_name = first_name
@@ -35,3 +35,12 @@ class Student:
             return sel_d
 
         return class_d
+
+    def reload_from_json(self, json):
+        """
+        reload function
+        """
+
+        for i in json:
+            if i in self.__dict__.keys():
+                self.__dict__[i] = json[i]
