@@ -116,4 +116,5 @@ class Rectangle(Base):
         """
         
         for i in range(self.height):
+
             print('#' * self.__width)
