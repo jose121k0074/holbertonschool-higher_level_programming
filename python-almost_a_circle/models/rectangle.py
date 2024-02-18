@@ -17,6 +17,11 @@ class Rectangle(Base):
         """
         super().__init__(id)
 
+        self.check_integer_parameter(width, 'width')
+        self.check_integer_parameter(height, 'height')
+        self.check_integer_parameter(x, 'x')
+        self.check_integer_parameter(y, 'y')
+
         self.__width = width
         self.__height = height
         self.__x = x
@@ -34,6 +39,7 @@ class Rectangle(Base):
         """
         ...
         """
+        self.check_integer_parameter(param, 'width')
 
         self.__width = param
 
@@ -49,6 +55,7 @@ class Rectangle(Base):
         """
         ...
         """
+        self.check_integer_parameter(param, 'height')
 
         self.__height = param
 
@@ -64,6 +71,7 @@ class Rectangle(Base):
         """
         ...
         """
+        self.check_integer_parameter(param, 'x')
 
         self.__x = param
 
@@ -79,5 +87,19 @@ class Rectangle(Base):
         """
         ...
         """
+        self.check_integer_parameter(param, 'y')
 
         self.__y = param
+
+    def check_integer_parameter(self, value, param):
+        """
+        ...
+        """
+        if type(value) is not int:
+            raise TypeError(param + ' must be an integer')
+
+        if value <= 0 and param in ('width', 'height'):
+            raise ValueError(param + ' must be > 0')
+
+        if value < 0 and param in ('x', 'y'):
+            raise ValueError(param + ' must be >= 0')
