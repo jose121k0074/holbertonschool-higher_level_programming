@@ -114,11 +114,6 @@ class Rectangle(Base):
         """
         ...
         """
-        if self.__y > 0:
-            print('\n' * self.__y, end='')
-
+        
         for i in range(self.height):
-            if self.__x > 0:
-                print(' ' * self.__x, end='')
-
             print('#' * self.__width)
