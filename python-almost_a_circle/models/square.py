@@ -3,6 +3,7 @@
 A Square class
 """
 
+
 from models.rectangle import Rectangle
 
 
